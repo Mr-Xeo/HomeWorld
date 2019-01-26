@@ -19,15 +19,25 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
         public Texture2D ScaleCursor;
     }
 
+    [System.Serializable]
+    public class GameData
+    {
+        public float ScrollSpeed;
+    }
+
     [SerializeField]
     private MouseInput m_MouseInput;
 
     [SerializeField]
     private MouseCursor m_MouseCursor;
 
+    [SerializeField]
+    private GameData m_GameData;
+
     public override void InstallBindings()
     {
         Container.BindInstance(m_MouseInput);
         Container.BindInstance(m_MouseCursor);
+        Container.BindInstance(m_GameData);
     }
 }
