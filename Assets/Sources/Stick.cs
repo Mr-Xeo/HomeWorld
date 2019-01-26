@@ -17,13 +17,25 @@ public class Stick : MonoBehaviour
         m_OriginalColor = m_SpriteRenderer.color;
     }
 
-    public void OnMouseIn()
+    public void OnRaycasterIn()
     {
         m_SpriteRenderer.color = m_HoverColor;
     }
 
-    public void OnMouseOut()
+    public void OnRaycasterOut()
     {
         m_SpriteRenderer.color = m_OriginalColor;
+    }
+
+    public void OnRaycasterPress(Vector2 mouseDelta)
+    {
+        Debug.Log("Mouse delta" + mouseDelta);
+
+        transform.Translate(mouseDelta, Space.World);
+    }
+
+    public void OnRaycasterUp()
+    {
+        
     }
 }
