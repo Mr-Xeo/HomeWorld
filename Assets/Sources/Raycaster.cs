@@ -2,7 +2,8 @@
 
 using Zenject;
 
-using MouseInput = GameInstaller.MouseInput;
+using MouseInput    = GameInstaller.MouseInput;
+using MouseCursor   = GameInstaller.MouseCursor;
 
 [RequireComponent(typeof(Camera))]
 public class Raycaster : MonoBehaviour
@@ -13,9 +14,11 @@ public class Raycaster : MonoBehaviour
     private Camera m_Camera;
 
     private Stick m_OldSelection;
+    private Stick m_RotateSelection;
     private Stick m_PressedSelection;
 
-    private MouseInput m_MouseInput;
+    private MouseInput  m_MouseInput;
+    private MouseCursor m_MouseCursor;
 
     private Vector2 m_OldMousePos;
 
@@ -27,14 +30,17 @@ public class Raycaster : MonoBehaviour
     }
 
     [Inject]
-    private void Init(MouseInput mouseInput)
+    private void Init(MouseInput mouseInput, MouseCursor mouseCursor)
     {
-        m_MouseInput = mouseInput;
+        m_MouseInput    = mouseInput;
+        m_MouseCursor   = mouseCursor;
     }
 
     private void Update()
     {
-        Stick selection = m_PressedSelection != null ? m_PressedSelection : GetHitOnMousePosition();
+        Stick selection =   m_PressedSelection != null ? m_PressedSelection : 
+                            m_RotateSelection != null ? m_RotateSelection : GetHitOnMousePosition();
+        
         if (selection != m_OldSelection)
         {
             if (m_OldSelection != null)
@@ -63,6 +69,11 @@ public class Raycaster : MonoBehaviour
             {
                 m_PressedSelection = selection;
             }
+
+            if (Input.GetButtonDown(m_MouseInput.MouseRightClick))
+            {
+                StartRotation(selection);
+            }
         }
 
         if (m_PressedSelection != null)
@@ -77,7 +88,32 @@ public class Raycaster : MonoBehaviour
             }
         }
 
+        if (m_RotateSelection != null)
+        {
+            Vector2 mouseDelta = m_Camera.WorldToScreenPoint(mousePosition) - m_Camera.WorldToScreenPoint(m_OldMousePos);
+            m_RotateSelection.OnRotate(mouseDelta);
+
+            if (Input.GetButtonUp(m_MouseInput.MouseRightClick))
+            {
+                EndRotation();
+            }
+        }
+
         m_OldMousePos = mousePosition;
+    }
+
+    private void StartRotation(Stick selection)
+    {
+        m_RotateSelection = selection;
+
+        Texture2D mouseCursor = m_MouseCursor.RotateCursor;
+        Cursor.SetCursor(mouseCursor, new Vector2(mouseCursor.width * 0.5f, mouseCursor.height * 0.5f), CursorMode.Auto);
+    }
+
+    private void EndRotation()
+    {
+        m_RotateSelection = null;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     private Stick GetHitOnMousePosition()

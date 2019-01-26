@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MouseInput:
     MouseClick: Left Click
+    MouseRightClick: Right Click
+  m_MouseCursor:
+    RotateCursor: {fileID: 2800000, guid: 5f209804137f78840ba790760c4df6bb, type: 3}
