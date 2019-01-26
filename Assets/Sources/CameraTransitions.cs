@@ -15,13 +15,18 @@ public class CameraTransitions : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            m_DrawerCamera.enabled = !m_DrawerCamera.enabled;
+            Transition();
+        }
+    }
 
-            for (int i = 0; i < m_ScrollAreas.Length; i++)
-            {
-                Image currentImage = m_ScrollAreas[i];
-                currentImage.enabled = !currentImage.enabled;
-            }
+    public void Transition()
+    {
+        m_DrawerCamera.enabled = !m_DrawerCamera.enabled;
+
+        for (int i = 0; i < m_ScrollAreas.Length; i++)
+        {
+            Image currentImage = m_ScrollAreas[i];
+            currentImage.enabled = !currentImage.enabled;
         }
     }
 }

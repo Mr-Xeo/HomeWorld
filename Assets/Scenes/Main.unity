@@ -191,12 +191,7 @@ PrefabInstance:
     - target: {fileID: 2865942245256085963, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5574
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865942245256085963, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: -6.1962
       objectReference: {fileID: 0}
     - target: {fileID: 2865942245256085963, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
         type: 3}
@@ -267,11 +262,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2629
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865942245256085963, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 2865942245256085963, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
         type: 3}
@@ -826,6 +816,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1099924965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3660113467208080471, guid: 74f44fc6947da994aba83498951f6720,
+    type: 3}
+  m_PrefabInstance: {fileID: 3269897657611533055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099924963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff1a34d40197b345898832e6a7d8067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1118394773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,11 +844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.841
-      objectReference: {fileID: 0}
-    - target: {fileID: 3184047791297446185, guid: 6b4f190d0cd521848b20b48e5329ee93,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 3184047791297446185, guid: 6b4f190d0cd521848b20b48e5329ee93,
         type: 3}
@@ -1163,11 +1160,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.087
-      objectReference: {fileID: 0}
-    - target: {fileID: 629835941985704928, guid: 75611e8c2e49c47449ca8c25915ce053,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 629835941985704928, guid: 75611e8c2e49c47449ca8c25915ce053,
         type: 3}
@@ -1698,11 +1690,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3184047791297446185, guid: 6b4f190d0cd521848b20b48e5329ee93,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3184047791297446185, guid: 6b4f190d0cd521848b20b48e5329ee93,
-        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
@@ -1979,6 +1966,11 @@ PrefabInstance:
       propertyPath: m_Level
       value: 
       objectReference: {fileID: 1444475910}
+    - target: {fileID: 5916831624233428602, guid: 0f5eec931e2a23e46bd09ff4c7fc1713,
+        type: 3}
+      propertyPath: m_CameraTransitions
+      value: 
+      objectReference: {fileID: 1099924965}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5eec931e2a23e46bd09ff4c7fc1713, type: 3}
 --- !u!1001 &6622856224817347491

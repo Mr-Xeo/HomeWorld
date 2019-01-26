@@ -23,6 +23,8 @@ public class Raycaster : MonoBehaviour
 
     private Vector2 m_OldMousePos;
 
+    private RaycastHit2D[] m_Raycasts = new RaycastHit2D[] { new RaycastHit2D() };
+
     private void Awake()
     {
         m_Camera = GetComponent<Camera>();
@@ -158,10 +160,10 @@ public class Raycaster : MonoBehaviour
         Vector2 mousePosition   = Input.mousePosition;
         Ray     ray             = m_Camera.ScreenPointToRay(mousePosition);
 
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, m_Camera.farClipPlane, m_RaycastLayer))
+        int results = Physics2D.GetRayIntersectionNonAlloc(ray, m_Raycasts, m_Camera.farClipPlane, m_RaycastLayer);
+        if (results > 0)
         {
-            return hit.collider.GetComponent<Stick>();
+            return m_Raycasts[0].collider.GetComponent<Stick>();
         }
 
         return null;
