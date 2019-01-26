@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+using TMPro;
+
 using Cinemachine;
 
 public class CameraTransitions : MonoBehaviour
@@ -9,24 +11,26 @@ public class CameraTransitions : MonoBehaviour
     private CinemachineVirtualCamera m_DrawerCamera;
 
     [SerializeField]
-    private Image[] m_ScrollAreas;
-
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Transition();
-        }
-    }
+    private DrawerHandler m_DrawerHandler;
 
     public void Transition()
     {
         m_DrawerCamera.enabled = !m_DrawerCamera.enabled;
 
-        for (int i = 0; i < m_ScrollAreas.Length; i++)
-        {
-            Image currentImage = m_ScrollAreas[i];
-            currentImage.enabled = !currentImage.enabled;
-        }
+        m_DrawerHandler.ToggleDrawer();
+    }
+
+    public void InitDrawerSlot(DrawerSlot drawerSlot)
+    {
+        m_DrawerHandler.InitDrawerSlot(drawerSlot);
+
+        Transition();
+    }
+
+    public void OnDrawingEnded()
+    {
+        m_DrawerHandler.OnDrawingEnded();
+
+        Transition();
     }
 }
