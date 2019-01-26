@@ -9,12 +9,14 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
     {
         public string MouseClick;
         public string MouseRightClick;
+        public string ScaleButton;
     }
 
     [System.Serializable]
     public class MouseCursor
     {
         public Texture2D RotateCursor; 
+        public Texture2D ScaleCursor;
     }
 
     [SerializeField]

@@ -16,6 +16,7 @@ public class Raycaster : MonoBehaviour
     private Stick m_OldSelection;
     private Stick m_RotateSelection;
     private Stick m_PressedSelection;
+    private Stick m_ScaleSelection;
 
     private MouseInput  m_MouseInput;
     private MouseCursor m_MouseCursor;
@@ -38,8 +39,9 @@ public class Raycaster : MonoBehaviour
 
     private void Update()
     {
-        Stick selection =   m_PressedSelection != null ? m_PressedSelection : 
-                            m_RotateSelection != null ? m_RotateSelection : GetHitOnMousePosition();
+
+        Stick   selection = GetExistingSelection();
+                selection = selection ?? GetHitOnMousePosition();
         
         if (selection != m_OldSelection)
         {
@@ -67,12 +69,18 @@ public class Raycaster : MonoBehaviour
         {
             if (Input.GetButtonDown(m_MouseInput.MouseClick))
             {
+                ResetSelections();
                 m_PressedSelection = selection;
             }
 
             if (Input.GetButtonDown(m_MouseInput.MouseRightClick))
             {
                 StartRotation(selection);
+            }
+
+            if (Input.GetButtonDown(m_MouseInput.ScaleButton))
+            {
+                StartScale(selection);
             }
         }
 
@@ -99,11 +107,24 @@ public class Raycaster : MonoBehaviour
             }
         }
 
+        if (m_ScaleSelection != null)
+        {
+            Vector2 mouseDelta = m_Camera.WorldToScreenPoint(mousePosition) - m_Camera.WorldToScreenPoint(m_OldMousePos);
+            m_ScaleSelection.OnScale(mouseDelta);
+
+            if (Input.GetButtonUp(m_MouseInput.ScaleButton))
+            {
+                EndScale();
+            }
+        }
+
         m_OldMousePos = mousePosition;
     }
 
     private void StartRotation(Stick selection)
     {
+        ResetSelections();
+
         m_RotateSelection = selection;
 
         Texture2D mouseCursor = m_MouseCursor.RotateCursor;
@@ -112,7 +133,23 @@ public class Raycaster : MonoBehaviour
 
     private void EndRotation()
     {
-        m_RotateSelection = null;
+        ResetSelections();
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
+    private void StartScale(Stick selection)
+    {
+        ResetSelections();
+
+        m_ScaleSelection = selection;
+
+        Texture2D mouseCursor = m_MouseCursor.ScaleCursor;
+        Cursor.SetCursor(mouseCursor, new Vector2(mouseCursor.width * 0.5f, mouseCursor.height * 0.5f), CursorMode.Auto);
+    }
+
+    private void EndScale()
+    {
+        ResetSelections();
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
@@ -128,5 +165,21 @@ public class Raycaster : MonoBehaviour
         }
 
         return null;
+    }
+
+    private Stick GetExistingSelection()
+    {
+        Stick   selection = m_PressedSelection;
+                selection = m_RotateSelection   ?? selection;
+                selection = m_ScaleSelection    ?? selection;
+
+        return selection;
+    }
+
+    private void ResetSelections()
+    {
+        m_PressedSelection  = null;
+        m_RotateSelection   = null;
+        m_ScaleSelection    = null;
     }
 }
