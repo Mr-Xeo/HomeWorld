@@ -22,14 +22,19 @@ public class CameraTransitions : MonoBehaviour
 
     public void InitDrawerSlot(DrawerSlot drawerSlot)
     {
-        m_DrawerHandler.InitDrawerSlot(drawerSlot);
-
-        Transition();
+        m_DrawerHandler.InitSelectionPanel(drawerSlot);
     }
 
     public void OnDrawingEnded()
     {
         m_DrawerHandler.OnDrawingEnded();
+
+        Transition();
+    }
+
+    public void OnDrawingSelected()
+    {
+        m_DrawerHandler.OnDrawingSelected();
 
         Transition();
     }

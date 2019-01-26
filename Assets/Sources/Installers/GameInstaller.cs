@@ -1,4 +1,5 @@
 using UnityEngine;
+
 using Zenject;
 
 [CreateAssetMenu(fileName = "GameInstaller", menuName = "Installers/GameInstaller")]
@@ -23,6 +24,17 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
     public class GameData
     {
         public float ScrollSpeed;
+
+        public string[] StartDrawings;
+
+        public Unlock[] Unlocks;
+    }
+
+    [System.Serializable]
+    public class Unlock
+    {
+        public int     DrawingCount;
+        public string  DrawingName;
     }
 
     [SerializeField]

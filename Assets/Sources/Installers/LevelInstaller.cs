@@ -14,5 +14,7 @@ public class LevelInstaller : MonoInstaller
     {
         Container.Bind<GameObject>().WithId("LD").FromInstance(m_Level).AsSingle();
         Container.Bind<CameraTransitions>().FromInstance(m_CameraTransitions).AsSingle();
+
+        Container.Bind<ProgressionHandler>().AsSingle();
     }
 }

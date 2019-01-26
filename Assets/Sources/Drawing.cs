@@ -2,6 +2,10 @@
 
 public class Drawing : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite m_Sprite;
+    public  Sprite Sprite { get { return m_Sprite; } }
+
     private Stick[] m_Sticks;
 
     private void Awake()
