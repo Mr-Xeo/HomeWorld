@@ -79,7 +79,7 @@ public class Stick : MonoBehaviour
     public void OnScale(Vector2 mouseDelta)
     {
         Vector3 scale = transform.localScale;
-        scale.y = Mathf.Max(scale.y + mouseDelta.x * c_ScaleStep * Time.deltaTime, c_MinScale);
+        scale.y = Mathf.Min(2f, Mathf.Max(scale.y + mouseDelta.x * c_ScaleStep * Time.deltaTime, c_MinScale));
         scale.x = scale.y * m_ScaleRatio;
 
         transform.localScale = scale;

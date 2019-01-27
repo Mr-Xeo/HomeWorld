@@ -7,6 +7,7 @@ using PoolData = DrawerHandler.PoolData;
 
 public class DrawingSelectionPanel : MonoBehaviour
 {
+    [System.Serializable]
     private struct DrawingSelection
     {
         public string Name;

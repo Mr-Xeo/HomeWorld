@@ -53,7 +53,7 @@ public class ProgressionHandler
             Unlock currentUnlock = unlocks[i];
             if (currentUnlock.DrawingCount <= m_DrawCount)
             {
-                m_UnlockIndex = i;
+                m_UnlockIndex = i + 1;
                 UnlockedDrawings.Add(currentUnlock.DrawingName);
             }
         }
@@ -65,7 +65,7 @@ public class ProgressionHandler
             LDUnlock currentUnlock = LDUnlocks[i];
             if (currentUnlock.DrawingCount <= m_DrawCount)
             {
-                m_LDUnlockIndex = i;
+                m_LDUnlockIndex = i + 1;
                 m_LevelHandler.AddNewLD(currentUnlock.LDSlot);
             }
         }
@@ -77,7 +77,7 @@ public class ProgressionHandler
             CitizenUnlock currentUnlock = citizenUnlocks[i];
             if (currentUnlock.DrawingCount <= m_DrawCount)
             {
-                m_CitizenUnlockIndex = i;
+                m_CitizenUnlockIndex = i + 1;
                 m_CitizenHandler.UnlockCitizen(currentUnlock.Citizen);
             }
         }
