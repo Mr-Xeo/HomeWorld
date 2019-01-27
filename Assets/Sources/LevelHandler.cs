@@ -12,12 +12,16 @@ public class LevelHandler
 
     private Transform m_Level;
 
-    private LevelHandler([Inject(Id = "LD")] GameObject level)
+    private CameraTransitions m_CameraTransitions;
+
+    private LevelHandler([Inject(Id = "LD")] GameObject level, CameraTransitions cameraTransitions)
     {
         LevelSlot[] levelSlots = level.GetComponentsInChildren<LevelSlot>();
         m_LevelSlots.AddRange(levelSlots);
 
-        m_Level = level.transform;
+        m_Level             = level.transform;
+        m_CameraTransitions = cameraTransitions;
+
     }
 
     public void AddNewLD(LevelSlot levelSlotPrefab)
@@ -26,6 +30,12 @@ public class LevelHandler
 
         LevelSlot levelSlot = levelSlotObject.GetComponent<LevelSlot>();
         levelSlot.Init(this);
+
+        DrawerSlot[] drawerSlots = levelSlot.GetComponentsInChildren<DrawerSlot>();
+        for (int i = 0; i < drawerSlots.Length; i++)
+        {
+            drawerSlots[i].Init(m_CameraTransitions);
+        }
 
         levelSlot.SnapToRightTarget(m_LevelSlots[m_LevelSlots.Count - 1].RightAnchor);
         m_LevelSlots.Add(levelSlot);
