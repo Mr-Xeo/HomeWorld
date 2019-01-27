@@ -12,6 +12,9 @@ public class LevelSlot : MonoBehaviour
     private Transform   m_RightAnchor;
     public  Vector3     RightAnchor { get { return m_RightAnchor.transform.position; } }
 
+    [SerializeField]
+    private Transform[] m_CitizenSpawnPoints;
+
     private LevelHandler m_LevelHandler;
 
     [Inject]
@@ -33,5 +36,10 @@ public class LevelSlot : MonoBehaviour
     public void SnapToLeftTarget(Vector3 leftAnchor)
     {
         transform.position = leftAnchor - m_RightAnchor.localPosition;
+    }
+
+    public Transform GetRandomSpawnPoint()
+    {
+        return m_CitizenSpawnPoints[Random.Range(0, m_CitizenSpawnPoints.Length)];
     }
 }

@@ -25,11 +25,14 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
     {
         public float ScrollSpeed;
 
-        public string[] StartDrawings;
+        public string[]         StartDrawings;
+        public CitizenType[]    StartCitizen;
 
         public Unlock[] Unlocks;
 
         public LDUnlock[] LDUnlocks;
+
+        public CitizenUnlock[] CitizenUnlocks;
     }
 
     [System.Serializable]
@@ -44,6 +47,13 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
     {
         public int          DrawingCount;
         public LevelSlot    LDSlot;
+    }
+
+    [System.Serializable]
+    public class CitizenUnlock
+    {
+        public int          DrawingCount;
+        public CitizenType  Citizen;
     }
 
     [SerializeField]

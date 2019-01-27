@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2959069340956072781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8713993767458542592}
+  m_Layer: 0
+  m_Name: SpawnPoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8713993767458542592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959069340956072781}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.43676, y: 4.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 267354336304431532}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8440370958127527096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8293894063935143827}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8293894063935143827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440370958127527096}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -35.43676, y: 4.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 267354336304431532}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1514286913909701092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
         type: 3}
+      propertyPath: m_CitizenSpawnPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
       propertyPath: m_LeftAnchor
       value: 
       objectReference: {fileID: 2429896308426962612}
@@ -436,6 +501,16 @@ PrefabInstance:
       propertyPath: m_RightAnchor
       value: 
       objectReference: {fileID: 6463046981270339308}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_CitizenSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 8293894063935143827}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_CitizenSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 8713993767458542592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94b3113e3d82e1f4eacc68f445a34429, type: 3}
 --- !u!4 &267354336304431532 stripped

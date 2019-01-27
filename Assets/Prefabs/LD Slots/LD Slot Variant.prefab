@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &846048623886677480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1121729474593995328}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1121729474593995328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846048623886677480}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4073951507438817375}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4094803422979426057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7404872843014099431}
+  m_Layer: 0
+  m_Name: SpawnPoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7404872843014099431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094803422979426057}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4073951507438817375}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1370723471213947362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,11 +127,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6180433769842154116, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
-        type: 3}
-      propertyPath: m_textInfo.textComponent
-      value: 
-      objectReference: {fileID: 5098222630884504422}
     - target: {fileID: 580959591660717092, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
         type: 3}
       propertyPath: m_Text
@@ -87,6 +142,11 @@ PrefabInstance:
       propertyPath: m_DrawerSlot
       value: 
       objectReference: {fileID: 8537829604224873511}
+    - target: {fileID: 6180433769842154116, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
+        type: 3}
+      propertyPath: m_textInfo.textComponent
+      value: 
+      objectReference: {fileID: 5098222630884504422}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa4ea811410f17469b90dfcdd7fe7f2, type: 3}
 --- !u!4 &8537829604224873511 stripped
@@ -145,11 +205,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_CitizenSpawnPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_CitizenSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1121729474593995328}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_CitizenSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 7404872843014099431}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_LeftAnchor
+      value: 
+      objectReference: {fileID: 1910926762209617735}
+    - target: {fileID: 1856328006939098106, guid: 94b3113e3d82e1f4eacc68f445a34429,
+        type: 3}
+      propertyPath: m_RightAnchor
+      value: 
+      objectReference: {fileID: 7101361775880154911}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94b3113e3d82e1f4eacc68f445a34429, type: 3}
 --- !u!4 &4073951507438817375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8743643702782700636, guid: 94b3113e3d82e1f4eacc68f445a34429,
+    type: 3}
+  m_PrefabInstance: {fileID: 4746297923560504323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1910926762209617735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6582790497305484100, guid: 94b3113e3d82e1f4eacc68f445a34429,
+    type: 3}
+  m_PrefabInstance: {fileID: 4746297923560504323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7101361775880154911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2545420243252073244, guid: 94b3113e3d82e1f4eacc68f445a34429,
     type: 3}
   m_PrefabInstance: {fileID: 4746297923560504323}
   m_PrefabAsset: {fileID: 0}
@@ -220,11 +317,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6787085260529441382, guid: 6b4f190d0cd521848b20b48e5329ee93,
-        type: 3}
-      propertyPath: m_textInfo.textComponent
-      value: 
-      objectReference: {fileID: 3038255568223954079}
     - target: {fileID: 286583834515571910, guid: 6b4f190d0cd521848b20b48e5329ee93,
         type: 3}
       propertyPath: m_Text
@@ -240,6 +332,11 @@ PrefabInstance:
       propertyPath: m_DrawerSlot
       value: 
       objectReference: {fileID: 1915997851545904094}
+    - target: {fileID: 6787085260529441382, guid: 6b4f190d0cd521848b20b48e5329ee93,
+        type: 3}
+      propertyPath: m_textInfo.textComponent
+      value: 
+      objectReference: {fileID: 3038255568223954079}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b4f190d0cd521848b20b48e5329ee93, type: 3}
 --- !u!4 &1915997851545904094 stripped
@@ -333,11 +430,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6180433769842154116, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
-        type: 3}
-      propertyPath: m_textInfo.textComponent
-      value: 
-      objectReference: {fileID: 2993513145536951892}
     - target: {fileID: 580959591660717092, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
         type: 3}
       propertyPath: m_Text
@@ -353,6 +445,11 @@ PrefabInstance:
       propertyPath: m_DrawerSlot
       value: 
       objectReference: {fileID: 1817177070634561813}
+    - target: {fileID: 6180433769842154116, guid: 2aa4ea811410f17469b90dfcdd7fe7f2,
+        type: 3}
+      propertyPath: m_textInfo.textComponent
+      value: 
+      objectReference: {fileID: 2993513145536951892}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa4ea811410f17469b90dfcdd7fe7f2, type: 3}
 --- !u!4 &1817177070634561813 stripped

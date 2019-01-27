@@ -23,6 +23,7 @@ MonoBehaviour:
     ScrollSpeed: 10
     StartDrawings:
     - Maison_Base
+    StartCitizen: 00000000
     Unlocks:
     - DrawingCount: 1
       DrawingName: Igloo
@@ -42,3 +43,22 @@ MonoBehaviour:
     - DrawingCount: 1
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
+    - DrawingCount: 4
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 7
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 12
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 15
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 18
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 20
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    CitizenUnlocks: []

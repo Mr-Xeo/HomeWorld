@@ -7,6 +7,7 @@ using Zenject;
 public class LevelHandler
 {
     private List<LevelSlot> m_LevelSlots = new List<LevelSlot>();
+    public  List<LevelSlot> LevelSlots { get { return m_LevelSlots; } }
 
     private int m_VisibleSlotIndex;
 
@@ -21,7 +22,6 @@ public class LevelHandler
 
         m_Level             = level.transform;
         m_CameraTransitions = cameraTransitions;
-
     }
 
     public void AddNewLD(LevelSlot levelSlotPrefab)
