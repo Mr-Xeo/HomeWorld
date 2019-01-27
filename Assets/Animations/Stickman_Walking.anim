@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: Stickman_Walking
   serializedVersion: 6
-  m_Legacy: 1
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -51,8 +51,26 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300026, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300028, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300030, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300032, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300034, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300036, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300038, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300040, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300042, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300044, guid: e32c3a047470b284981153abebfc9236, type: 3}
+    - {fileID: 21300046, guid: e32c3a047470b284981153abebfc9236, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

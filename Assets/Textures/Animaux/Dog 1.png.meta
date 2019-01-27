@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 3d6e9e77e0440394b8def5b18c1782b3
+guid: 02f066ac1fe79d44ea67d5c5fa22e989
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Cat1_0
-    21300002: Cat1_1
-    21300004: Cat1_2
-    21300006: Cat1_3
+    21300000: Dog 1_0
+    21300002: Dog 1_1
+    21300004: Dog 1_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -51,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -88,53 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat1_0
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 151
-        width: 84
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 454ee0032bf01ff4396bc410012bee00
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat1_1
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 151
-        width: 104
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 006aa2919641b904fa79415bfb4b9688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat1_2
+      name: Dog 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
-        width: 124
-        height: 133
+        y: 5
+        width: 139
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,19 +101,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7d11cf2f86c52b478c134d9215f9e93
+      spriteID: f6de90ddce8bc444a8f3a520a144cc23
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat1_3
+      name: Dog 1_1
       rect:
         serializedVersion: 2
-        x: 163
+        x: 167
         y: 0
-        width: 104
-        height: 134
+        width: 139
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +121,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 876965fa9d4ef054e824ef078bc8939d
+      spriteID: bc50f5b2d3712724fa062a827b082567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog 1_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 11
+        width: 139
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bfddc4d2b4a9b4f89580042ef0c18a
       vertices: []
       indices: 
       edges: []
@@ -170,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cd2e58bdc823c0542852b7ea59cef40a
+    spriteID: 2bb90c887996d46499800c1ec6d1f53d
     vertices: []
     indices: 
     edges: []

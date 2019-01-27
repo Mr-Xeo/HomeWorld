@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: 128d49b066bc81c4ab246ef278efcc9e
+guid: c221e24511115d04e9cd3da929bc0956
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Cat2_0
+    21300002: Cat2_1
+    21300004: Cat2_2
+    21300006: Cat2_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,14 +44,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -82,11 +86,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Cat2_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 156
+        width: 84
+        height: 134
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03713aef1be2c84429bb3d4aa860f602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat2_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 156
+        width: 103
+        height: 134
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1636b061712ba6747b17158b49b5f20c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 115
+        height: 134
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7544599f5ef40644a8b57e3a7d30ae3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat2_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 102
+        height: 134
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e319e842ec5c0814cb2f797ac864e6f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e1d0768399cc44445865a3b804011044
     vertices: []
     indices: 
     edges: []
