@@ -33,7 +33,7 @@ public class DrawerSlot : MonoBehaviour
     }
 
     [Inject]
-    private void Init(CameraTransitions cameraTransitions)
+    public void Init(CameraTransitions cameraTransitions)
     {
         m_CameraTransitions = cameraTransitions;
     }
