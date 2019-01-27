@@ -25,6 +25,8 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
     {
         public float ScrollSpeed;
 
+        public Vector2 SpawnDuration;
+
         public string[]         StartDrawings;
         public CitizenType[]    StartCitizen;
 

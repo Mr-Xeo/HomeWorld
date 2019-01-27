@@ -15,11 +15,14 @@ public class Stickman : MonoBehaviour, ICitizen
 
     private Animator m_Animator;
 
+    private SpriteRenderer m_SpriteRenderer;
+
     Vector3[] m_Directions = new Vector3[] { Vector3.left, Vector3.right };
 
     private void Awake()
     {
         m_Animator = GetComponent<Animator>();
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public IEnumerator DoThings()
@@ -46,7 +49,7 @@ public class Stickman : MonoBehaviour, ICitizen
     {
         m_Animator.SetBool("IsWalking", false);
 
-        int waitDuration = Random.Range(0, 11);
+        int waitDuration = Random.Range(2, 5);
         yield return new WaitForSeconds(waitDuration);
 
         State = CitizenState.WALKING;
@@ -59,11 +62,11 @@ public class Stickman : MonoBehaviour, ICitizen
         //move to random direction for 2 seconds
         Vector3 direction = m_Directions[Random.Range(0, m_Directions.Length)];
 
+        m_SpriteRenderer.flipX = direction == Vector3.left;
+
         float walkStart = Time.time;
         while (Time.time - walkStart < 2)
         {
-            walkStart = Time.time;
-
             transform.Translate(direction * Time.deltaTime * m_Speed, Space.World);
 
             yield return new WaitForEndOfFrame();

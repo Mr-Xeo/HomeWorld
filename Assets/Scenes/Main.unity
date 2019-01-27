@@ -294,6 +294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LD Slot 2 Variant 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9115614752240720847, guid: 425c8879a2e55c3428534618cc317e5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 952946074877395720, guid: 425c8879a2e55c3428534618cc317e5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1510,6 +1515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LD Slot 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115614752240720847, guid: 425c8879a2e55c3428534618cc317e5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 952946074877395720, guid: 425c8879a2e55c3428534618cc317e5f,
         type: 3}
