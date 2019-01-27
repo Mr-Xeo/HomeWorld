@@ -26,3 +26,7 @@ MonoBehaviour:
     Unlocks:
     - DrawingCount: 2
       DrawingName: Pagoda
+    LDUnlocks:
+    - DrawingCount: 1
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}

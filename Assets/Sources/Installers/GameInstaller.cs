@@ -28,6 +28,8 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
         public string[] StartDrawings;
 
         public Unlock[] Unlocks;
+
+        public LDUnlock[] LDUnlocks;
     }
 
     [System.Serializable]
@@ -35,6 +37,13 @@ public class GameInstaller : ScriptableObjectInstaller<GameInstaller>
     {
         public int     DrawingCount;
         public string  DrawingName;
+    }
+
+    [System.Serializable]
+    public class LDUnlock
+    {
+        public int          DrawingCount;
+        public LevelSlot    LDSlot;
     }
 
     [SerializeField]
