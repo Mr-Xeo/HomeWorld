@@ -14,6 +14,22 @@ public class Cat : MonoBehaviour, ICitizen
 
     public IEnumerator DoThings()
     {
-        yield return null;
+        while (true)
+        {
+            switch(State)
+            {
+                case CitizenState.IDLE:
+                    yield return DoIdle();
+                    break;
+            }
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator DoIdle()
+    {
+        int waitDuration = Random.Range(2, 5);
+        yield return new WaitForSeconds(waitDuration);
     }
 }
