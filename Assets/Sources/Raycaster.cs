@@ -25,11 +25,15 @@ public class Raycaster : MonoBehaviour
 
     private RaycastHit2D[] m_Raycasts = new RaycastHit2D[] { new RaycastHit2D() };
 
+    private AudioSource m_audioClick;
+
     private void Awake()
     {
         m_Camera = GetComponent<Camera>();
 
         m_OldMousePos = m_Camera.ScreenToWorldPoint(Input.mousePosition);
+
+        m_audioClick = GetComponent<AudioSource>();
     }
 
     [Inject]
@@ -73,11 +77,14 @@ public class Raycaster : MonoBehaviour
             {
                 ResetSelections();
                 m_PressedSelection = selection;
+                m_audioClick.Play();
             }
 
             if (Input.GetButtonDown(m_MouseInput.MouseRightClick))
             {
                 StartRotation(selection);
+                m_audioClick.Play();
+
             }
 
             if (Input.GetButtonDown(m_MouseInput.ScaleButton))
