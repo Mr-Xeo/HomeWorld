@@ -21,7 +21,7 @@ MonoBehaviour:
     ScaleCursor: {fileID: 2800000, guid: c05999c79c81bfc4a970dad20527837c, type: 3}
   m_GameData:
     ScrollSpeed: 10
-    SpawnDuration: {x: 30, y: 40}
+    SpawnDuration: {x: 10, y: 30}
     StartDrawings:
     - Maison_Base
     StartCitizen: 
