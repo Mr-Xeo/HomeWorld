@@ -46,8 +46,8 @@ public class DrawerSlot : MonoBehaviour
     public void SetDrawing(Drawing drawing)
     {
         //append drawing to drawer slot
+        drawing.DisableDrawing(); //disable first to hide unkept (otherwise will teleport and trigger exit physics)
         drawing.transform.SetParent(m_DrawerSlot, false);
-        drawing.DisableDrawing();
 
         //disable previous sprite and collider
         m_SpriteRenderer.enabled    = false;

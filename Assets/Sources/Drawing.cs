@@ -17,7 +17,8 @@ public class Drawing : MonoBehaviour
     {
         for (int i = 0; i < m_Sticks.Length; i++)
         {
-            m_Sticks[i].DisableStick();
+            Stick currentStick = m_Sticks[i];
+            currentStick.DisableStick();
         }
     }
 }

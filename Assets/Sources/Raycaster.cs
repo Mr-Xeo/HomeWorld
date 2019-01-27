@@ -93,7 +93,6 @@ public class Raycaster : MonoBehaviour
 
             if (Input.GetButtonUp(m_MouseInput.MouseClick))
             {
-                selection.OnRaycasterUp();
                 m_PressedSelection = null;
             }
         }
