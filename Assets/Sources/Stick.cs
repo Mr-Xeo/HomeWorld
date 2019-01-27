@@ -7,8 +7,10 @@ public class Stick : MonoBehaviour
     [SerializeField]
     private Color m_HoverColor;
 
-    private Collider2D      m_Collider2D;
-    private SpriteRenderer  m_SpriteRenderer;
+    private Collider2D m_Collider2D;
+
+    private SpriteRenderer      m_SpriteRenderer;
+    private SpriteRenderer[]    m_SpriteRenderers;
 
     private Color m_OriginalColor;
 
@@ -17,10 +19,14 @@ public class Stick : MonoBehaviour
     private const float c_MinScale  = 0.2f;
     private const float c_ScaleStep = 2f;
 
+    private bool m_IsKeep;
+
     private void Awake()
     {
-        m_Collider2D        = GetComponent<Collider2D>();
+        m_Collider2D = GetComponent<Collider2D>();
+
         m_SpriteRenderer    = GetComponent<SpriteRenderer>();
+        m_SpriteRenderers   = GetComponentsInChildren<SpriteRenderer>();
 
         m_OriginalColor = m_SpriteRenderer.color;
 
@@ -30,7 +36,24 @@ public class Stick : MonoBehaviour
 
     public void DisableStick()
     {
+        //only keep sticks marked as keep
+        if (!m_IsKeep)
+        {
+            DisableRenderers();
+        }
+
         m_Collider2D.enabled = false;
+    }
+
+    private void DisableRenderers()
+    {
+        m_SpriteRenderer.enabled = false;
+
+        for (int i = 0; i < m_SpriteRenderers.Length; i++)
+        {
+            m_SpriteRenderers[i].enabled = false;
+        }
+
     }
 
     public void OnRaycasterIn()
@@ -62,8 +85,13 @@ public class Stick : MonoBehaviour
         transform.localScale = scale;
     }
 
-    public void OnRaycasterUp()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        
+        m_IsKeep = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        m_IsKeep = false;
     }
 }
