@@ -4,7 +4,9 @@ using System.Collections;
 
 public class Cat : MonoBehaviour, ICitizen
 {
-    public CitizenType Type { get { return CitizenType.CAT; } }
+    [SerializeField]
+    private CitizenType m_Type;
+    public CitizenType Type { get { return m_Type; } }
 
     public CitizenState State { get; private set; }
 
