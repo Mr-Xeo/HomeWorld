@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 using Zenject;
 
+using GameData = GameInstaller.GameData;
+
 public class CitizenHandler
 {
     public class PoolData
@@ -25,11 +27,15 @@ public class CitizenHandler
 
     private List<CitizenType> m_UnlockedCitizen = new List<CitizenType>();
 
-    private CitizenHandler(AsyncProcessor asyncProcessor, [Inject(Id = "CitizenParent")] Transform citizenParent)
+    private GameData m_GameData;
+
+    private CitizenHandler(AsyncProcessor asyncProcessor, [Inject(Id = "CitizenParent")] Transform citizenParent, GameData gameData)
     {
         m_AsyncProcessor = asyncProcessor;
 
         m_CitizenParent = citizenParent;
+
+        m_GameData = gameData;
 
         GameObject[] citizen = Resources.LoadAll<GameObject>("Citizens");
         for (int i = 0; i < citizen.Length; i++)
@@ -45,7 +51,7 @@ public class CitizenHandler
             m_Poolers.Add(iCitizen.Type, poolData);
         }
 
-        //m_AsyncProcessor.StartCoroutine(SpawnCitizen());
+        m_AsyncProcessor.StartCoroutine(SpawnCitizen());
     }
 
     public void Init(LevelHandler levelHandler)
@@ -67,7 +73,7 @@ public class CitizenHandler
                 SpawnCitizen(citizen);
             }
 
-            int spawnDuration = Random.Range(1, 10);
+            int spawnDuration = Random.Range((int) m_GameData.SpawnDuration.x, (int) m_GameData.SpawnDuration.y);
             yield return new WaitForSeconds(spawnDuration);
         }
     }
