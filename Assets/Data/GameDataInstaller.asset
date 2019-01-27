@@ -22,10 +22,22 @@ MonoBehaviour:
   m_GameData:
     ScrollSpeed: 10
     StartDrawings:
-    - Shape
+    - Maison_Base
     Unlocks:
-    - DrawingCount: 2
-      DrawingName: Pagoda
+    - DrawingCount: 1
+      DrawingName: Igloo
+    - DrawingCount: 3
+      DrawingName: Chapelle
+    - DrawingCount: 10
+      DrawingName: Constantinople
+    - DrawingCount: 18
+      DrawingName: Moulin
+    - DrawingCount: 21
+      DrawingName: Pagode
+    - DrawingCount: 25
+      DrawingName: Bateau
+    - DrawingCount: 35
+      DrawingName: Immeuble
     LDUnlocks:
     - DrawingCount: 1
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
