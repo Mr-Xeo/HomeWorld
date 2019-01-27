@@ -29,13 +29,15 @@ MonoBehaviour:
       DrawingName: Igloo
     - DrawingCount: 3
       DrawingName: Chapelle
-    - DrawingCount: 10
+    - DrawingCount: 8
       DrawingName: Constantinople
-    - DrawingCount: 18
+    - DrawingCount: 14
+      DrawingName: Tipi
+    - DrawingCount: 20
       DrawingName: Moulin
-    - DrawingCount: 21
-      DrawingName: Pagode
     - DrawingCount: 25
+      DrawingName: Pagode
+    - DrawingCount: 30
       DrawingName: Bateau
     - DrawingCount: 35
       DrawingName: Immeuble
@@ -49,16 +51,55 @@ MonoBehaviour:
     - DrawingCount: 7
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
-    - DrawingCount: 12
+    - DrawingCount: 10
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
-    - DrawingCount: 15
+    - DrawingCount: 13
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
-    - DrawingCount: 18
+    - DrawingCount: 16
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
-    - DrawingCount: 20
+    - DrawingCount: 19
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 22
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 25
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 28
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 31
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 34
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 37
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 40
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 43
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 46
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 49
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 52
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 55
+      LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
+        type: 3}
+    - DrawingCount: 58
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
     CitizenUnlocks: []
