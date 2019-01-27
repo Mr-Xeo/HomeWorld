@@ -25,11 +25,15 @@ public class DrawerSlot : MonoBehaviour
 
     private Collider2D m_Collider;
 
+    AudioSource m_AudioSource;
+
     private void Awake()
     {
         m_OriginalColor = m_SpriteRenderer.color;
 
         m_Collider = GetComponent<Collider2D>();
+
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     [Inject]
@@ -69,5 +73,7 @@ public class DrawerSlot : MonoBehaviour
         m_SpriteRenderer.color = m_HoverColor;
 
         m_CameraTransitions.InitDrawerSlot(this);
+
+        m_AudioSource.Play();
     }
 }
