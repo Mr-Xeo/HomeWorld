@@ -21,9 +21,10 @@ MonoBehaviour:
     ScaleCursor: {fileID: 2800000, guid: c05999c79c81bfc4a970dad20527837c, type: 3}
   m_GameData:
     ScrollSpeed: 10
+    SpawnDuration: {x: 30, y: 40}
     StartDrawings:
     - Maison_Base
-    StartCitizen: 00000000
+    StartCitizen: 
     Unlocks:
     - DrawingCount: 1
       DrawingName: Igloo
@@ -102,4 +103,8 @@ MonoBehaviour:
     - DrawingCount: 58
       LDSlot: {fileID: 7143127621055878666, guid: cd347a45924216b408dda3c281771fc8,
         type: 3}
-    CitizenUnlocks: []
+    CitizenUnlocks:
+    - DrawingCount: 1
+      Citizen: 0
+    - DrawingCount: 2
+      Citizen: 1
